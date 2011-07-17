@@ -11,7 +11,6 @@ class Task
 
   def find_candidates
     sel=Person._where
-    i=0
     competences_with_level.each do |cwl|
       cwl_id=:"cwl#{i}" #задаем идентификатор ксу
       lev_id=:"lev#{i}"
@@ -21,7 +20,6 @@ class Task
       sel.where([cwl_id,CompetenceWithLevel.properties[:level][:predicate],lev_id]) #с уровнем
       sel.where([lev_id,CompetenceLevel.properties[:value][:predicate],val]) #который имеет значение
       sel.filter("?val#{i} >= #{cwl.level.value}") #которое выше или равно тому, что требуется для данной задачи
-      i+=1
     end
     sel.instances
   end
