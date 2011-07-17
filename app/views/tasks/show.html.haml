@@ -1,0 +1,36 @@
+-title t('.')+" | "+@task.name
+%p
+  %b=t('helpers.label.task.name') + ":"
+  = @task.name
+#links
+  = link_to t('links.edit'), edit_project_task_path(@project,@task)
+  \|
+  = link_to t('links.back'), @project
+  %br
+  =link_to t('cwl_tasks.new_link'), new_task_cwl_task_path(@task)
+
+%h2=t('cwl_tasks.index')
+%table
+  %tr
+    %th=t('helpers.label.competence_with_level.competence')
+    %th=t('helpers.label.competence_with_level.level')
+    %th
+    %th
+  -@task.competences_with_level.each do |ccwl|
+    -cc=ccwl.competence
+    -cl=ccwl.level
+    %tr
+      %td=cc.name
+      %td=cl.value
+      %td=link_to t('links.edit'), edit_task_cwl_task_path(@task,ccwl)
+      %td=link_to t('links.remove'), task_cwl_task_path(@task,ccwl), :confirm=>"Are you sure?", :method=>:delete
+
+%h2=t('tasks.candidates')
+%table
+  %tr
+    %th=t('helpers.label.person.name')
+    %th
+  -@candidates.each do |person|
+    %tr
+      %td=person.name
+      %td=link_to t('links.show'), person

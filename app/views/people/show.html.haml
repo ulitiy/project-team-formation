@@ -1,0 +1,33 @@
+-title t('.')+" | "+(@person.name.nil? ? "" : @person.name)
+%p
+  %b=t('helpers.label.person.name') + ":"
+  = @person.name
+%p
+  %b=t('helpers.label.person.email') + ":"
+  = @person.email
+%p
+  %b=t('helpers.label.person.age') + ":"
+  = @person.age
+
+#links
+  = link_to t('links.edit'), edit_person_path(@person)
+  \|
+  = link_to t('links.back'), people_path
+  %br
+  =link_to t('cwl_people.new_link'), new_person_cwl_person_path(@person)
+
+%h2=t('cwl_people.index')
+%table
+  %tr
+    %th=t('helpers.label.competence_with_level.competence')
+    %th=t('helpers.label.competence_with_level.level')
+    %th
+    %th
+  -@person.competences_with_level.each do |ccwl|
+    -cc=ccwl.competence
+    -cl=ccwl.level
+    %tr
+      %td=cc.name
+      %td=cl.value
+      %td=link_to t('links.edit'), edit_person_cwl_person_path(@person,ccwl)
+      %td=link_to t('links.remove'), person_cwl_person_path(@person,ccwl), :confirm=>t('links.sure'), :method=>:delete

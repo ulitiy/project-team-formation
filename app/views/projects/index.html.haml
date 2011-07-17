@@ -1,0 +1,25 @@
+-title t('.')
+%table
+  %tr
+    %th=t 'helpers.label.project.name'
+    %th=t 'helpers.label.project.vendor'
+    %th=t 'helpers.label.project.homepage'
+    %th=t 'helpers.label.project.created'
+    %th
+    %th
+    %th
+
+  - @projects.each do |project|
+    %tr
+      %td= project.name
+      %td= project.vendor
+      %td= project.homepage
+      %td= project.created
+      %td= link_to t('links.show'), project
+      %td= link_to t('links.edit'), edit_project_path(project)
+      %td= link_to t('links.destroy'), project, :confirm => t('links.sure'), :method => :delete
+
+%br
+
+= link_to t('projects.new'), new_project_path
+

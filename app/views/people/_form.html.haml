@@ -1,0 +1,12 @@
+= form_for @person do |f|
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :age
+    = f.text_field :age
+  .actions
+    = f.submit t('save')

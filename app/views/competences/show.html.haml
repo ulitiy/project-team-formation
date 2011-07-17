@@ -1,0 +1,8 @@
+-title t('.')+' | '+@competence.name
+%p
+  %b=t('helpers.label.competence.name') + ":"
+  = @competence.name
+
+= link_to t('links.edit'), edit_competence_path(@competence)
+\|
+= link_to t('links.back'), competences_path

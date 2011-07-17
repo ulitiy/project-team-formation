@@ -1,0 +1,48 @@
+.clear_block {
+  clear: both;
+}
+
+
+
+
+
+
+
+
+#padder {
+    background-color:white;
+    border:black solid 1px;
+    position:relative;
+    margin:50px;
+    padding:10px;
+    width:800px;
+    left:50%;
+    margin-left:-400px;
+}
+
+#auth {
+    float:right;
+}
+
+#breadcrumbs {
+    margin:10px;
+}
+
+body {
+    background-color:lightblue;
+}
+
+#search_form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tm_image_in_list {
+    float:right;
+}
+
+.tm_image_in_list img {
+    max-width: 300px;
+    max-height: 75px;
+}
+

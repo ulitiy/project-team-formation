@@ -1,0 +1,20 @@
+-title t('.')
+%table
+  %tr
+    %th=t 'helpers.label.person.name'
+    %th=t 'helpers.label.person.email'
+    %th=t 'helpers.label.person.age'
+    %th
+    %th
+
+  - @people.each do |person|
+    %tr
+      %td= person.name
+      %td= person.email
+      %td= person.age
+      %td= link_to t('links.show'), person
+      %td= link_to t('links.edit'), edit_person_path(person)
+
+%br
+
+= link_to t('people.new'), new_person_path

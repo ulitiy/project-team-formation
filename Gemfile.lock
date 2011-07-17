@@ -1,0 +1,166 @@
+GIT
+  remote: https://github.com/bendiken/rdf-sesame.git
+  revision: 42bd18ceab4cb9f0090bdcee596f048ad8477296
+  specs:
+    rdf-sesame (0.3.0)
+      json_pure (>= 1.4.2)
+      rdf (~> 0.3.0)
+
+GIT
+  remote: https://github.com/bendiken/sparql-client.git
+  revision: d828251846914781d319f8e7cbd185c2e5412d09
+  specs:
+    sparql-client (0.0.10)
+      json_pure (>= 1.4.2)
+      net-http-persistent (~> 1.4.1)
+      rdf (~> 0.3.0)
+
+GIT
+  remote: https://github.com/datagraph/spira.git
+  revision: 0c7d14e2fc5b0a4a7e3a1ea56c6c5243eb9cf9da
+  specs:
+    spira (0.0.13)
+      promise (>= 0.3.0)
+      rdf (>= 0.2.3)
+      rdf-isomorphic (>= 0.3.0)
+
+GIT
+  remote: https://github.com/mongoid/mongoid.git
+  revision: 8f61f5b58c109cda398bf5b2bfc639fb7989a57b
+  specs:
+    mongoid (2.0.1)
+      activemodel (~> 3.0)
+      mongo (~> 1.3)
+      tzinfo (~> 0.3.22)
+
+GIT
+  remote: https://github.com/nex3/haml.git
+  revision: 5f04bbda570a41acfb1d5d8ac971ae99c1ae7046
+  specs:
+    haml (3.2.0.alpha.0)
+
+GIT
+  remote: https://github.com/plataformatec/devise.git
+  revision: e763f843c436e0cdc426e7a3dd0ca61656fa3783
+  specs:
+    devise (1.4.0.dev)
+      bcrypt-ruby (~> 2.1.2)
+      orm_adapter (~> 0.0.3)
+      warden (~> 1.0.3)
+
+GIT
+  remote: https://github.com/ryanb/cancan.git
+  revision: ff13a82ddabd2b9e83a6f47a79883ef8dcd0e945
+  specs:
+    cancan (1.6.4)
+
+GIT
+  remote: https://github.com/yaroslav/russian.git
+  revision: 57af7fee22f9c324ac6313064c36e582d58ba8df
+  specs:
+    russian (0.2.7)
+
+GIT
+  remote: https://github.com/zachinglis/crummy.git
+  revision: ea83a50bcc694c41b3336f9b9fb865644735f7cb
+  specs:
+    crummy (1.1.1)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    abstract (1.0.0)
+    actionmailer (3.0.7)
+      actionpack (= 3.0.7)
+      mail (~> 2.2.15)
+    actionpack (3.0.7)
+      activemodel (= 3.0.7)
+      activesupport (= 3.0.7)
+      builder (~> 2.1.2)
+      erubis (~> 2.6.6)
+      i18n (~> 0.5.0)
+      rack (~> 1.2.1)
+      rack-mount (~> 0.6.14)
+      rack-test (~> 0.5.7)
+      tzinfo (~> 0.3.23)
+    activemodel (3.0.7)
+      activesupport (= 3.0.7)
+      builder (~> 2.1.2)
+      i18n (~> 0.5.0)
+    activerecord (3.0.7)
+      activemodel (= 3.0.7)
+      activesupport (= 3.0.7)
+      arel (~> 2.0.2)
+      tzinfo (~> 0.3.23)
+    activeresource (3.0.7)
+      activemodel (= 3.0.7)
+      activesupport (= 3.0.7)
+    activesupport (3.0.7)
+    addressable (2.2.4)
+    arel (2.0.9)
+    bcrypt-ruby (2.1.4)
+    bson (1.3.0)
+    bson_ext (1.3.0)
+    builder (2.1.2)
+    erubis (2.6.6)
+      abstract (>= 1.0.0)
+    i18n (0.5.0)
+    json_pure (1.5.1)
+    mail (2.2.19)
+      activesupport (>= 2.3.6)
+      i18n (>= 0.4.0)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    mime-types (1.16)
+    mongo (1.3.0)
+      bson (>= 1.3.0)
+    net-http-persistent (1.4.1)
+    orm_adapter (0.0.4)
+    polyglot (0.3.1)
+    promise (0.3.0)
+    rack (1.2.2)
+    rack-mount (0.6.14)
+      rack (>= 1.0.0)
+    rack-test (0.5.7)
+      rack (>= 1.0)
+    rails (3.0.7)
+      actionmailer (= 3.0.7)
+      actionpack (= 3.0.7)
+      activerecord (= 3.0.7)
+      activeresource (= 3.0.7)
+      activesupport (= 3.0.7)
+      bundler (~> 1.0)
+      railties (= 3.0.7)
+    railties (3.0.7)
+      actionpack (= 3.0.7)
+      activesupport (= 3.0.7)
+      rake (>= 0.8.7)
+      thor (~> 0.14.4)
+    rake (0.8.7)
+    rdf (0.3.3)
+      addressable (= 2.2.4)
+    rdf-isomorphic (0.3.4)
+      rdf (>= 0.2.3)
+    thor (0.14.6)
+    treetop (1.4.9)
+      polyglot (>= 0.3.1)
+    tzinfo (0.3.27)
+    warden (1.0.4)
+      rack (>= 1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  addressable (= 2.2.4)
+  bson_ext (>= 1.2.4)
+  cancan!
+  crummy!
+  devise!
+  haml!
+  mongoid!
+  rails (= 3.0.7)
+  rdf-sesame!
+  russian!
+  sparql-client!
+  spira!

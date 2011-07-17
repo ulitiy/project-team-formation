@@ -1,0 +1,29 @@
+!!!
+%html{ html_attrs('ru') }
+  %head
+    %title!=yield :title
+    =csrf_meta_tag
+    =stylesheet_link_tag "default", "scaffold"
+    =javascript_include_tag :defaults
+    =yield :head
+%body
+  #padder
+    #auth
+      -if account_signed_in?
+        =link_to t("devise.logout"), :destroy_account_session
+        =link_to t("devise.profile"), :edit_account_registration
+      -else
+        =link_to t("devise.login"), :new_account_session
+    #main-menu
+      =link_to t('main_menu.projects'), projects_path
+      |
+      =link_to t('main_menu.people'), people_path
+      |
+      =link_to t('main_menu.competences'), competences_path
+      !=" | "+link_to(t('main_menu.person'), person_path(current_account.person_uri)) if account_signed_in?
+    %h1=yield :title
+    #breadcrumbs=render_crumbs
+    #notice=notice
+    #alert=alert
+    #content=yield
+

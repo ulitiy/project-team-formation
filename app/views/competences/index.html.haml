@@ -1,0 +1,18 @@
+-title t('.')
+%table
+  %tr
+    %th=t 'helpers.label.competence.name'
+    %th
+    %th
+    %th
+
+  - @competences.each do |competence|
+    %tr
+      %td= competence.name
+      %td= link_to t('links.show'), competence
+      %td= link_to t('links.edit'), edit_competence_path(competence)
+      %td= link_to t('links.destroy'), competence, :confirm => t('links.sure'), :method => :delete
+
+%br
+
+= link_to t('competences.new'), new_competence_path

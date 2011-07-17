@@ -1,0 +1,6 @@
+= form_for [@project,@task] do |f|
+  .field
+    = f.label :name
+    = f.text_field :name
+  .actions
+    = f.submit t('save')

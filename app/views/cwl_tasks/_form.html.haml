@@ -1,0 +1,7 @@
+-url=@ccwl.persisted? ? task_cwl_task_path(@task,@ccwl) : task_cwl_tasks_path(@task)
+=form_for @ccwl, :url=>url do |f|
+  =t 'helpers.label.competence_with_level.competence'
+  =f.select :competence, @competences.collect { |comp| [comp.name, comp.id] }
+  =t 'helpers.label.competence_with_level.level'
+  =f.select :level, @levels.collect { |lev| [lev.name, lev.id] }
+  =f.submit t('save')

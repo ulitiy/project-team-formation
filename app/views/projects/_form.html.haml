@@ -1,0 +1,16 @@
+= form_for @project do |f|
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :vendor
+    = f.text_field :vendor
+  .field
+    = f.label :homepage
+    = f.text_field :homepage
+  .field
+    = f.label :description
+    = f.text_area :description
+  .actions
+    = f.submit t('save')
+

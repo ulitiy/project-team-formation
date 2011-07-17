@@ -1,0 +1,36 @@
+-title t('projects.show')+' | '+@project.name
+%p
+  %b=t('helpers.label.project.name') + ":"
+  = @project.name
+%p
+  %b=t('helpers.label.project.vendor') + ":"
+  = @project.vendor
+%p
+  %b=t('helpers.label.project.homepage') + ":"
+  = @project.homepage
+%p
+  %b=t('helpers.label.project.created') + ":"
+  = @project.created
+%p
+  %b=t('helpers.label.project.description') + ":"
+  = @project.description
+
+#links
+  = link_to t('links.edit'), edit_project_path(@project)
+  \|
+  = link_to t('links.back'), projects_path
+  %br
+  =link_to t('tasks.new'), new_project_task_path(@project)
+%h2=t('tasks.index')
+%table
+  %tr
+    %th=t('helpers.label.task.name')
+    %th
+    %th
+    %th
+  -@project.tasks.each do |task|
+    %tr
+      %td=task.name
+      %td=link_to t('links.show'), project_task_path(@project,task)
+      %td=link_to t('links.edit'), edit_project_task_path(@project,task)
+      %td=link_to t('links.destroy'), [@project,task], :confirm=>t('links.sure'), :method=>:delete
